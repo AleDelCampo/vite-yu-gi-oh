@@ -20,7 +20,14 @@
   font-family: sans-serif;
 }
 
+body {
+  background-color: #875b23;
+}
+
 .container {
   max-width: 1000px;
   margin: 0 auto;
+  padding: 40px;
+  background-color: #a16c2a;
+  border-radius: 24px;
 }

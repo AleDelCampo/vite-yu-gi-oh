@@ -3,9 +3,7 @@
 import {store} from '../store.js';
 
 export default {
-
     name: 'AppPagination',
-
     data() {
         return {
             store,
@@ -18,15 +16,12 @@ export default {
 <template>
 
 <nav>
-
     <div>
         <img src="https://vignette1.wikia.nocookie.net/yugiohenespanol/images/a/aa/Yugioh_anime_logo.jpg/revision/latest?cb=20130310042737&path-prefix=es" alt="">
     </div>
-
     <h1>
         Yu-Gi-Oh Api
     </h1>
-
 </nav>
 
 </template>
@@ -39,7 +34,7 @@ nav {
     padding-left: 40px;
     width: 100%;
     height: 80px;
-    background-color: white;
+    background-color: whitesmoke;
     margin-bottom: 100px;
 
     img {

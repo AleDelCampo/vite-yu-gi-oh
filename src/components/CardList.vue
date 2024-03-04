@@ -2,10 +2,10 @@
 
 import AppPagination from "./AppPagination.vue";
 import CardItem from "./CardItem.vue";
-import {store} from '../store.js';
+import {store} from '../store.js';  
 
 export default {
-    
+
     name: 'CardList',
 
     components:  {

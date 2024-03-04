@@ -1,7 +1,7 @@
 <script>
 
 export default {
-    
+
     name: 'CardItem',
     
     props: {
@@ -15,7 +15,7 @@ export default {
 
     <li class="card-container">
         <img v-for="image in card.card_images" :src="image.image_url" >
-        {{ card.name }}
+        {{ card.name }} <br> <span>{{ card.archetype }}</span>
     </li>
 
 </template>
@@ -26,7 +26,12 @@ export default {
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: calc(100% / 3 - 20px / 3 * 2);
+    width: calc(100% / 5 - 20px / 5 * 4);
+    background-color: #d48f38;
+
+    span {
+        color: red;
+    }
 }
 
 </style>
