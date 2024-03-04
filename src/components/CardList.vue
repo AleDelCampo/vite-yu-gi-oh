@@ -28,7 +28,7 @@ export default {
 
     <div class="container">
         <div id="card-counter">
-            Totale Carte: {{ store.cards.length }}
+            Totale Carte: {{ store.cards.length === 0 ? 'Cards Incoming..!!' : store.cards.length }}
         </div>
         
         <ul>
