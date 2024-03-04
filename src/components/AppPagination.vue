@@ -39,6 +39,7 @@ nav {
 
     img {
         width: 100px;
+        transform: translateY(10%);
     }
 
     h1 {

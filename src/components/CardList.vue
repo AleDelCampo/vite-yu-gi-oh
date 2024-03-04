@@ -27,7 +27,12 @@ export default {
     <AppPagination></AppPagination>
 
     <div class="container">
+        <div id="card-counter">
+            Totale Carte: {{ store.cards.length }}
+        </div>
+        
         <ul>
+
             <CardItem 
                 v-for="currentCard in store.cards"
                 :card="currentCard"
@@ -45,6 +50,15 @@ ul {
     display: flex;
     flex-flow: row wrap;
     gap: 20px;
+}
+
+#card-counter {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    padding: 12px;
+    background-color: #212529;
 }
 
 </style>
