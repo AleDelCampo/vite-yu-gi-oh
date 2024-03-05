@@ -1,11 +1,16 @@
 <script>
 
+import CardFounder from './CardFounder.vue';
 import {store} from '../store.js';
 
 export default {
 
     name: 'AppPagination',
     
+    components: {
+        CardFounder,
+    },
+
     data() {
         return {
             store,
@@ -24,6 +29,7 @@ export default {
     <h1>
         Yu-Gi-Oh Api
     </h1>
+    <CardFounder></CardFounder>
 </nav>
 
 </template>
@@ -33,6 +39,7 @@ export default {
 nav {
     display: flex;
     align-items: center;
+    justify-content: space-around;
     padding-left: 40px;
     width: 100%;
     height: 80px;
@@ -50,5 +57,4 @@ nav {
         font-size: 2em;
     }
 }
-
 </style>
