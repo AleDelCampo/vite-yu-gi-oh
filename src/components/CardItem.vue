@@ -8,8 +8,8 @@ export default {
         card: Object,
     },
 }
-
 </script>
+
 
 <template>
 
@@ -19,6 +19,7 @@ export default {
     </li>
 
 </template>
+
 
 <style lang="scss">
 
@@ -33,5 +34,4 @@ export default {
         color: red;
     }
 }
-
 </style>

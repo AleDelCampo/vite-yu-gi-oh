@@ -19,8 +19,8 @@ export default {
         }
     }
 }
-
 </script>
+
 
 <template>
 
@@ -43,6 +43,7 @@ export default {
 
 </template>
 
+
 <style lang="scss">
 
 ul {
@@ -60,5 +61,4 @@ ul {
     padding: 12px;
     background-color: #212529;
 }
-
 </style>

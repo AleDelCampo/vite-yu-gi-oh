@@ -10,6 +10,7 @@ export default {
       selectedArchetype: '',
       archetypes: [],
     };
+
   },
 
   created() {
@@ -20,6 +21,7 @@ export default {
   methods: {
 
     findArchetypes() {
+
       axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
         .then(res => {
           this.archetypes = res.data;
@@ -29,9 +31,9 @@ export default {
     searchCards() {
 
       const apiIndex = this.selectedArchetype ?
-        `https://db.ygoprodeck.com/api/v7/cardinfo.php?num=48&offset=40&archetype=${this.selectedArchetype}` :
-        `https://db.ygoprodeck.com/api/v7/cardinfo.php?num=48&offset=40`;
-      
+      `https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=${(this.selectedArchetype)}` :
+      `https://db.ygoprodeck.com/api/v7/cardinfo.php`;
+
       axios.get(apiIndex)
         .then(res => {
           this.$emit('search', res.data.data);
@@ -39,23 +41,22 @@ export default {
     }
   }
 };
-
 </script>
     
+
 <template>
 
-    <div>
+  <div>
 
     <select v-model="selectedArchetype" @change="searchCards()" class="select">
       <option value="">Seleziona Archetipo</option>
       <option v-for="archetype in archetypes" :key="archetype.archetype_name" :value="archetype.archetype_name">{{ archetype.archetype_name }}</option>
     </select>
 
-    </div>
+  </div>
 
 </template>
-  
-  
-  
+
+
 <style lang="scss">
 </style>
